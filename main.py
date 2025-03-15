@@ -7,6 +7,7 @@ class CSV:
     COLUMNS = ["date", "amount", "category", "description"]
 
 #INITIALIZING THE CSV FILE
+
     @classmethod
     def initialize_csv(cls):
         try:
@@ -30,6 +31,8 @@ class CSV:
             writer = csv.DictWriter(csvfile, fieldnames=cls.COLUMNS)
             writer.writerow(new_entry)
         print("Entry added successfully")
+
+
 CSV.initialize_csv()
 CSV.add_entry("20-07-2-25", 125.65, "Income", "Salary" )
         
